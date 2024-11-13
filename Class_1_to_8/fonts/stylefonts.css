@@ -1,0 +1,32 @@
+div{
+    margin-bottom: 25px;
+}
+
+.normal{
+    font-style: normal;
+    font-family: helvetica, verdana, sans-serif;
+    text-transform: uppercase;
+    word-spacing: 5em;
+}
+
+.oblique{
+    font-style: oblique;
+}
+
+.vertical{
+    color: blue;
+    vertical-align: super;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: 900;
+}
+
+.semibold{
+    font-weight: bold;
+    text-shadow: 2px 2px red, 5px 5px 4px red;
+}

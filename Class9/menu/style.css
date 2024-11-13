@@ -1,0 +1,23 @@
+.item{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+.item a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: green;
+}
+
+.menu{
+    padding: 0px;
+    display: inline-block;
+    float: right;
+}
+
+nav{
+    overflow: hidden;
+    padding: 20px;
+    background-color: antiquewhite;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var number = Math.ceil(Math.random() * 100);
+        console.log(number);
+
+    </script>
+</head>
+
+<body>
+    <script>
+        alert("Try to find my number from 1 to 100");
+
+        do {
+            var continu = true;
+            var yourNumber = parseInt(prompt("Type a numer: "));
+            if (yourNumber == number) {
+                alert("You won")
+                continu = false
+            }
+
+            if (yourNumber > number) {
+                alert("Your number is to big")
+            } else {
+                alert("Your number is to small")
+            }
+        } while (continu);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var counter = 1
+        function addLine(){
+            var myDiv = document.getElementById("output");
+            myDiv.innerHTML += counter + ". Hello <br>";
+            counter++
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addLine()">Click to add a line</button>
+    <div id="output"></div>
+</body>
+</html>

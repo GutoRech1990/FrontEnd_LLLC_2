@@ -1,0 +1,12 @@
+.container{
+    color: red;
+    width: 50%;
+    margin: auto;
+    text-align: justify;
+    border: solid black;
+    padding: 15px;
+}
+
+.colorblue{
+    color: blue;
+}

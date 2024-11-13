@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+#current{
+    color: blue;
+}
+
+nav{
+    background-color: lightgray;
+    padding: 3% 25px;
+    overflow: hidden;
+}
+
+.logo{
+    width: 25%;
+    float: left;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.menu{
+    width: 75%;
+    float: right;
+    text-align: right;
+    /* word-spacing: 2em; */
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 3em;
+    display: inline-block;
+    padding: 3px 0.5em;
+    border-bottom-width: 5px;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+}
+
+.menu a:link, .menu a:visited{
+    color: green;
+}
+
+.menu a:hover{
+    border-bottom-color: red;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-top-color: red;
+    border-top-width: 5px;
+    border-top-style: solid;
+}
+
+.main-container{
+    clear: both;
+    overflow: hidden;
+}
+
+.main-container main{
+    width: 68%;
+    float: left;
+    margin-right: 2%;
+    text-align: justify;
+}
+
+.main-container aside{
+    width: 30%;
+    float: left;
+}
+
+.center{
+    text-align: center;
+}
+
+.colaborators .images{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colaborators .images > div{
+    width: 23%;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.colaborators .images > div img{
+    width: 100%;
+}
+
+.description{
+    padding: 10px;
+}

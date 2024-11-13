@@ -1,0 +1,11 @@
+body{
+    /* padding-top: 100px; */
+    margin-top: 0;
+}
+
+nav{
+    background-color: green;
+    height: 200px;
+    position: sticky;
+    top: 0px;
+}

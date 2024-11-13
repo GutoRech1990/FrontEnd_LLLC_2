@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+}
+
+img{
+    width: 200px;
+    display: block;
+}
+
+.container{
+    width: 200px;
+    /* height: 200px;
+    overflow: hidden; */
+    margin: auto;
+    position: relative;
+}
+
+.cat2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    transition: 2s;
+}
+
+.cat2:hover{
+    opacity: 0;
+}

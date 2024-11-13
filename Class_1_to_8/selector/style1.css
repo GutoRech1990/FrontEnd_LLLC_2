@@ -1,0 +1,17 @@
+*{
+    font-style: italic;
+}
+
+#two{
+    font-size: 2em;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+
+
+h1.one{
+    color: rgb(222, 238, 222);
+    background-color: rgb(46, 103, 102);
+}
+

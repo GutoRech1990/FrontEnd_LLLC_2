@@ -1,0 +1,21 @@
+form input{
+    float: right;
+}
+
+div{
+    overflow: hidden;
+    padding: 10px;
+}
+
+form{
+    background-color: blue;
+    max-width: 400px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+button{
+    float: right;
+}
