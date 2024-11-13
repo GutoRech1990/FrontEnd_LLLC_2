@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function say(text, count) {
+            var elem = document.getElementById("output") 
+            var i;
+            for(i=1; i<= count; i++){
+                elem.innerHTML += `I have to say ${text} <br>`
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="say('Hello', 5)">Hello</button>
+    <button onclick="say('Bye', 5)">Bye</button>
+
+    <div id="output"></div>
+</body>
+
+</html>

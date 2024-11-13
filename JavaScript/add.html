@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(a, b) {
+            a = parseFloat(a);
+            b = parseFloat(b);
+            var c = a + b;
+            return c;
+        }
+
+        function compute() {
+            var n1 = prompt("What is the value of A ?");
+            var n2 = prompt("What is the value of B ?");
+
+            var sum = add(n1, n2);
+            alert(`${n1} + ${n2} = ${sum}`);
+
+        }
+
+        function area(radius) {
+            var result = 3.14 * radius * radius;
+            return result;
+        }
+
+        function compute2() {
+            var r = prompt("What is the radius?");
+            var result = area(r)
+            alert(result)
+        }
+
+        function le(a, b, c) {
+            var x = (c - b) / a;
+            return x;
+        }
+
+        function compute3() {
+            var a = prompt("What is the value of A ?");
+            var b = prompt("What is the value of B ?");
+            var c = prompt("What is the value of C ?");
+            var solution = le(a, b, c);
+            alert(solution);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="compute()">Compute</button>
+    <button onclick="compute2()">Area</button>
+    <button onclick="compute3()">Linear Equation</button>
+
+</body>
+
+</html>
