@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="asknumbers">
+
+    </div>
+
+    <script>
+        let asknumbers = document.getElementById('asknumbers')
+
+        let n1 = parseFloat(prompt("What is the first number?"))
+        let n2 = parseFloat(prompt("What is the second number?"))
+        let n3 = parseFloat(prompt("What is the third number?"))
+
+        function maxNumber() {
+            asknumbers.innerHTML = `You choose ${n1}, ${n2} and ${n3} <br>`
+            if (n1 > n2 && n1 > n3) {
+                return asknumbers.innerHTML += `The biggest number is ${n1}`;
+            } else if (n2 > n3) {
+                return asknumbers.innerHTML += `The biggest number is ${n2}`;
+            } else {
+                return asknumbers.innerHTML += `The biggest number is ${n3}`;
+            }
+        }
+
+        maxNumber(n1, n2, n3);
+
+
+    </script>
+</body>
+
+</html>
