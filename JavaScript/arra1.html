@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            color: red;
+            padding-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        .name {
+            padding-right: 20px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        var fruits = ["apple", "orange", "lemon", "mango", "banana"];
+
+        function getFruits() {
+            // Here we can download the fruits from our server
+            let output = document.getElementById("output");
+
+            for (let index = 0; index < fruits.length; index++) {
+                const element = fruits[index];
+                output.innerHTML += "<div class='item'>" + "<span class='name'>" + element + "</span>" + "<button onclick='buy(" + index + ")''>Buy</button>" + "</div>";
+            }
+        }
+
+        function buy(index) {
+            alert("You want to buy " + fruits[index]);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="getFruits()">Get fruits</button>
+    <div id="output"></div>
+</body>
+
+</html>

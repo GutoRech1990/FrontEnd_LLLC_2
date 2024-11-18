@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            color: red;
+            padding-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        .name {
+            padding-right: 20px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        var fruits = ["apple", "orange", "lemon", "mango", "banana"];
+        var cart = [];
+
+        function getFruits() {
+            // Here we can download the fruits from our server
+            let output = document.getElementById("output");
+
+            for (let index = 0; index < fruits.length; index++) {
+                cart[index] = 0;
+                const element = fruits[index];
+                output.innerHTML += "<div class='item'>" + "<span class='name'>" + element + "</span>" + "<button onclick='buy(" + index + ")''>Buy</button>" + "</div>";
+            }
+        }
+
+        function buy(index) {
+            // let cart_output = document.getElementById("cart_output");
+            // cart_output.innerHTML += fruits[index] + "<br>";
+            cart[index] = cart[index] + 1;
+            console.log(cart);
+            presentCart();
+        }
+
+        function presentCart() {
+            let cart_output = document.getElementById("cart_output");
+            cart_output.innerHTML = "";
+            // Iterate over cart
+            for (let index = 0; index < cart.length; index++) {
+                const number = cart[index];
+                if (number > 0) {
+                    cart_output.innerHTML += fruits[index] + " x " + number + "<button onclick='remove(" + index + ")'>-</button>" + "<br>";
+                }
+            }
+        }
+
+        function remove(index) {
+            cart[index] -= 1;
+            presentCart();
+        }
+
+        function purchase() {
+            for (let index = 0; index < cart.length; index++) {
+                cart[index] = 0;
+            }
+            presentCart();
+            alert("Thank you for using our shop")
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="getFruits()">Get fruits</button>
+    <div id="output"></div>
+    <h1>Your cart</h1>
+    <div id="cart_output"></div>
+    <button onclick="purchase()">Purchase</button>
+</body>
+
+</html>
