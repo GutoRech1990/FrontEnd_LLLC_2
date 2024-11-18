@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var fruits_en = ["apple", "orange", "lemon", "mango", "banana"];
+        var fruits_fr = ["pomme", "orange", "citron", "mangue", "banane"];
+
+        function translateWord() {
+            var output = document.getElementById("output");
+            var input = document.getElementById("word");
+            var word = input.value;
+            input.value = "";
+            var index = fruits_en.indexOf(word);
+            if (index == -1) {
+                output.innerHTML = "I do not know the word " + word;
+            } else {
+                var word_fr = fruits_fr[index];
+                output.innerHTML = "The translation of " + word + " is: " + word_fr;
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" name="" id="word" onkeydown="if(event.key === 'Enter') translateWord()"> <button
+        onclick="translateWord()">Translate</button>
+    <div id="output"></div>
+</body>
+
+</html>
