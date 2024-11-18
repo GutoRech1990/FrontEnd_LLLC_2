@@ -87,6 +87,7 @@ body{
     border-color: #493706;
 }
 
+
 .container{
     background-color: rgba(240, 248, 255, 0.887);
     font-family: "Quicksand", serif;
@@ -96,6 +97,21 @@ body{
     border-radius: 20px;
     padding: 30px;
     text-align: justify;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container h1 {
+    animation: fadeIn 1s ease-in-out;
 }
 
 .container h1{
@@ -127,6 +143,7 @@ body{
     filter:sepia(100%);
     transition: 0.5s;
 }
+
 
 .d-flex img:hover{
     filter: sepia(0%);
