@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(obj) {
+            obj.style.color = "red";
+            obj.style.fontSize = "24px";
+            // obj.style['font-size'] = "24px"; alternative
+            obj.innerHTML = "New text"
+        }
+    </script>
+</head>
+
+<body>
+    <p onclick="change(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis asperiores tenetur ipsum
+        minima, et soluta
+        fugiat, consequuntur molestias ad dolor dicta ducimus nobis sit perspiciatis illum omnis reprehenderit autem
+        animi.</p>
+</body>
+
+</html>

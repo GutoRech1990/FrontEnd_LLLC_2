@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var current = 0;
+        var myImages = ['cat.png', 'ghost.png', 'pumpkin.png', 'zombie.png']
+
+        function next() {
+            current = (current + 1) % myImages.length;
+            var image = document.getElementById("image")
+            image.src = "./images/" + myImages[current];
+        }
+
+        function previous() {
+            current = (current - 1 + myImages.length) % myImages.length;
+            var image = document.getElementById("image")
+            image.src = "./images/" + myImages[current];
+        }
+    </script>
+</head>
+
+<body>
+    <img src="./images/cat.png" alt="" width="100" id="image"> <br>
+    <button onclick="previous()">Previous</button>
+    <button onclick="next()">Next</button>
+    
+</body>
+
+</html>

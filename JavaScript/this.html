@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(obj) {
+            obj.value = "Hello world"
+            // obj.type = "checkbox"
+            // obj.onclick = function () { alert("Hello") }
+        }
+
+        function change2(obj){
+            obj.innerHTML = "Hello <b>world 2</b>"
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Click" onclick="change(this)"> <br>
+    <button onclick="change2(this)">Click 2</button>
+</body>
+
+</html>
