@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+    <script>
+        function hide() {
+            var elements = document.getElementsByName("abc");
+            for (let index = 0; index < elements.length; index++) {
+                const element = elements[index];
+                element.className = "hidden";
+            }
+        }
+
+        function show() {
+            var elements = document.getElementsByName("abc");
+            for (let index = 0; index < elements.length; index++) {
+                const element = elements[index];
+                element.className = "visible";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p name="abc" class="red">Paragraph One</p>
+    <p>Paragraph Two</p>
+    <p name="abc">Paragraph Three</p>
+
+    <button onclick="hide()">Hide</button>
+    <button onclick="show()">Show</button>
+
+</body>
+
+</html>

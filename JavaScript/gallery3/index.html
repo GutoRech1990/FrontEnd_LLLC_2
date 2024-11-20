@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        var repetition = null;
         var current = 0;
         var myImages = ['cat.png', 'ghost.png', 'pumpkin.png', 'zombie.png']
 
@@ -15,17 +16,27 @@
             image.src = "./images/" + myImages[current];
         }
 
-        // function start(){
-        //     while (true){}
-        // }
+        function start() {
+            var button = document.getElementById("start")
+            button.disabled = true;
+            repetition = setInterval("next()", 2000)
+        }
+
+        function stopIteration() {
+            clearInterval(repetition);
+            var button = document.getElementById("start")
+            button.disabled = false;
+        }
 
     </script>
 </head>
 
 <body>
     <img src="./images/cat.png" alt="" width="100" id="image"> <br>
-    <button onclick="start()">Start</button>
-    
+    <button onclick="start()" id="start">Start</button>
+    <button onclick="stopIteration()">Stop</button>
+
+
 </body>
 
 </html>

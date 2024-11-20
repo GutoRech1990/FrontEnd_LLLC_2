@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var repetition = null;
+        var repetition2 = null;
+        var current = 0;
+        var current2 = 0;
+        var myImages = ['cat.png', 'ghost.png', 'pumpkin.png', 'zombie.png']
+
+        function next() {
+            current = (current + 1) % myImages.length;
+            var image = document.getElementById("image1")
+            image.src = "./images/" + myImages[current];
+        }
+
+        function start() {
+            var button = document.getElementById("start")
+            button.disabled = true;
+            repetition = setInterval("next()", 2000)
+        }
+
+        function stopIteration() {
+            clearInterval(repetition);
+            var button = document.getElementById("start")
+            button.disabled = false;
+        }
+
+        // -------------------------------------
+
+        function next2() {
+            current = (current2 + 1) % myImages.length;
+            var image = document.getElementById("image2")
+            image.src = "./images/" + myImages[current];
+        }
+
+        function start2() {
+            var button = document.getElementById("start2")
+            button.disabled = true;
+            repetition2 = setInterval("next2()", 2000)
+        }
+
+        function stopIteration2() {
+            clearInterval(repetition2);
+            var button = document.getElementById("start2")
+            button.disabled = false;
+        }
+
+    </script>
+</head>
+
+<body>
+    <img src="./images/cat.png" alt="" width="100" id="image1"> <br>
+    <button onclick="start()" id="start">Start</button>
+    <button onclick="stopIteration()">Stop</button>
+    <br><br><br>
+    <img src="./images/cat.png" alt="" width="100" id="image2"> <br>
+    <button onclick="start2()" id="start2">Start</button>
+    <button onclick="stopIteration2()">Stop</button>
+
+
+</body>
+
+</html>
