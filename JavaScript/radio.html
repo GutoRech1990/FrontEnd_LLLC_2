@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image {
+            display: block;
+            margin: auto;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <select name="" id="mySelect" onchange="changeImages()">
+        <option value="cat.png">Cat</option>
+        <option value="ghost.png">Ghost</option>
+        <option value="pumpkin.png">Pumpkin</option>
+        <option value="zombie.png">Zombie</option>
+    </select>
+    <div>
+        <img src="./images/cat.png" alt="" id="image">
+    </div>
+
+
+    <script>
+        function changeImages() {
+            let sel = document.getElementById("mySelect")
+            let index = sel.selectedIndex;
+            let image = sel.options[index].value;
+
+            document.getElementById("image").src = "images/" + image;
+        }
+    </script>
+</body>
+
+</html>

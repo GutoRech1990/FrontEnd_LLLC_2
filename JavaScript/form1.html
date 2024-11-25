@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form action="#" name="myForm">
+        First name: <input type="text" name="fn" id=""> <br>
+        Lats name: <input type="text" name="ln" id=""> <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <button ondblclick="setValues()">Set values</button>
+
+
+    <script>
+        function setValues() {
+            document.myForm.fn.value = "José"
+            document.myForm.ln.value = "Rech"
+        }
+    </script>
+
+</body>
+
+</html>
