@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        var out = document.getElementById("container");
+
+        var str = "  Hello World!!!    ";
+        str = str.trim();
+        var l = str.length;
+        out.innerHTML = l;
+
+        //2.th character in the string
+        //var char = str[1];
+
+        var char = str.charAt(1);
+        out.innerHTML += "<br>" + char;
+
+        var pos = str.indexOf("WWorld");
+        out.innerHTML += "<br>" + pos;
+
+        newStr = str.replace("World", "LLLC");
+        out.innerHTML += "<br>" + newStr;
+
+        var subStr = newStr.substr(6,3);
+        out.innerHTML += "<br>" + subStr;
+
+        var subStr = newStr.slice(6,9);
+        out.innerHTML += "<br>" + subStr;
+
+        var upper = str.toUpperCase();
+        out.innerHTML += "<br>" + upper;
+
+        out.innerHTML += "<br>" + str;
+
+
+        fruitsStr = "apple,banana,mango,lemon";
+
+        fruitArray = fruitsStr.split(",");
+        console.log(fruitArray);
+
+    </script>
+</body>
+
+</html>

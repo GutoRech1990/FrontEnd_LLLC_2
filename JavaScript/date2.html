@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="startShowing()">
+    <div id="container"></div>
+
+    <script>
+        function showDiff() {
+            var out = document.getElementById("container")
+
+            now = new Date();
+
+            var wedding = new Date(1995, 0, 7, 14);
+
+            var diff = now.getTime() - wedding.getTime();
+
+            var years = Math.floor(diff / (365 * 24 * 60 * 60 * 1000));
+            remains = diff - years * (365 * 24 * 60 * 60 * 1000);
+
+            var m = Math.floor(remains / (30 * 24 * 60 * 60 * 1000));
+            remains = remains - m * (30 * 24 * 60 * 60 * 1000)
+
+            var days = Math.floor(remains / (24 * 60 * 60 * 1000));
+            remains = remains - days * (24 * 60 * 60 * 1000)
+
+            var h = Math.floor(remains / (60 * 60 * 1000));
+            remains = remains - h * (60 * 60 * 1000)
+
+            var min = Math.floor(remains / (60 * 1000));
+            remains = remains - min * (60 * 1000)
+
+            var sec = Math.floor(remains / (1000));
+            remains = remains - sec * (1000)
+
+            out.innerHTML = years + " " + m + " " + days + " " + h + " " + min + " " + sec;
+        }
+
+        function startShowing() {
+            setInterval("showDiff()", 100)
+        }
+
+
+
+    </script>
+</body>
+
+</html>

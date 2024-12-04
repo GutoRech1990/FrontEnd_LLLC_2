@@ -6,31 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #image {
-            display: block;
+        .container {
             margin: auto;
             width: 200px;
+            text-align: center;
+        }
+
+        .container img {
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <select name="" id="mySelect" onchange="changeImages()">
-        <option value="cat.png">Cat</option>
-        <option value="ghost.png">Ghost</option>
-        <option value="pumpkin.png">Pumpkin</option>
-        <option value="zombie.png">Zombie</option>
-    </select>
-    <div>
+    <div class="container">
         <img src="./images/cat.png" alt="" id="image">
+        <input type="radio" name="choise" value="cat.png" id="" checked onchange="changeImage(this)">
+        <input type="radio" name="choise" value="ghost.png" id="" onchange="changeImage(this)">
+        <input type="radio" name="choise" value="pumpkin.png" id="" onchange="changeImage(this)">
+        <input type="radio" name="choise" value="zombie.png" id="" onchange="changeImage(this)">
+
     </div>
 
 
     <script>
-        function changeImages() {
-            let sel = document.getElementById("mySelect")
-            let index = sel.selectedIndex;
-            let image = sel.options[index].value;
+        function changeImage(obj) {
+            image = obj.value;
 
             document.getElementById("image").src = "images/" + image;
         }

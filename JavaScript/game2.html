@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gameboard {
+            margin: auto;
+            border-style: solid;
+            border-width: 2px;
+            border-collapse: collapse;
+        }
+
+        .gameboard td {
+            height: 50px;
+            width: 50px;
+            border-style: solid;
+            border-width: 2px;
+        }
+    </style>
+
+    <script>
+        let previous = 0
+        let points = 0
+        let repetition = null
+
+        function startgame() {
+            repetition = setInterval("changeColor()", 1000)
+            setTimeout("stopGame()", 10000)
+        }
+
+        function stopGame() {
+            clearInterval(repetition)
+            points = 0
+        }
+
+        function changeColor() {
+            tds = document.querySelectorAll(".gameboard td")
+            randomNumber = Math.random()
+
+            index = Math.floor(randomNumber * 25)
+
+            tds[previous].style["background-color"] = ""
+            tds[index].style["background-color"] = "red"
+
+            previous = index
+        }
+
+        function check(td) {
+            if (td.style["background-color"] == "red") {
+                points++
+            } else {
+                points--
+            }
+        }
+
+        function showPoints() {
+            document.getElementById("points").innerHTML = points
+        }
+    </script>
+</head>
+
+<body>
+    <table class="gameboard">
+        <tr>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+            <td onclick="check(this)"></td>
+        </tr>
+    </table>
+
+    <button onclick="startgame()">Start</button> <br>
+    Points <span id="points"></span>
+</body>
+
+</html>

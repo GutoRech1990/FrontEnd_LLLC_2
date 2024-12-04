@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <script>
+        var out = document.getElementById("container")
+        var now = new Date();
+
+        out.innerHTML = now;
+
+        var wedding = new Date(1995, 0, 7, 14);
+        out.innerHTML += "<br>" + wedding;
+
+        var diff = now.getTime() - wedding.getTime();
+        out.innerHTML += "<br>" + diff;
+    </script>
+</body>
+
+</html>

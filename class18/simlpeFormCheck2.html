@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Simple Form test 2</title>
+    <style type="text/css">
+        .bgError {
+            background-color: pink;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+
+    <script>
+        function clearErrors(f){
+            var inputs = f.getElementsByTagName("input");
+
+            for (let index = 0; index < inputs.length; index++) {
+                const element = inputs[index];
+                element.className = element.className.replaceAll("bgError", "");
+                
+            }
+        }
+        
+        function check(f){
+            clearErrors(f);
+         
+         //I check all the fields first and the I return the correct value
+         returnValue = true;
+        
+        
+         //the name and the address must be not empty
+         //Before checking I trim the values
+         
+         if(f.fn.value.trim() == ""){
+          f.fn.className += " bgError";
+          returnValue = false;
+         }
+         
+         if(f.ln.value.trim() == ""){
+          f.ln.className += " bgError";
+          returnValue = false; }
+         
+         if(f.address.value.trim() == ""){
+          f.address.className += " bgError";
+          returnValue = false; }
+         
+         //the password must have ar list 3 characters
+         if(f.pass.value.length < 3){
+          f.pass.className += " bgError";
+          returnValue = false; }
+         
+         //Password and repeted password must be the same
+         if(f.pass.value != f.passrep.value){
+          f.pass.className += " bgError";
+          f.passrep.className += " bgError";
+          returnValue = false; }
+         
+         
+         return returnValue;
+        }
+          
+
+    </script>
+</head>
+
+<body>
+    <h1>Simple Form test</h1>
+    <form method=get onsubmit="return check(this)" action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+        First Name: <input name="fn" type="text" class="green"><br>
+        Last Mame: <input name="ln" type="text"  class="green"><br>
+        Address: <input name="address" type="text" class="green"><br>
+        Password: <input name="pass" type="password"  class="green"><br>
+        Repeat Password: <input name="passrep" type="password"  class="green"><br>
+        <input type="submit" value="Send">
+    </form>
+</body>
+
+</html>

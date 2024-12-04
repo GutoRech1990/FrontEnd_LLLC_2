@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var url = "http://api.openweathermap.org/data/2.5/weather?q=XXXXXX&appid=f0eb99d5d978be0f60c18814625bc822&units=metric";
+        async function getWeather() {
+            var city = document.getElementById("city").value;
+            var currentUrl = url.replace("XXXXXX", city);
+
+            //console.log(currentUrl);
+
+            result = await fetch(currentUrl);
+
+            weatherObject = await result.json();
+
+            console.log(weatherObject);
+
+            temperature = weatherObject.main.temp;
+            pressure = weatherObject.main.pressure;
+            humidity = weatherObject.main.humidity;
+
+            var out = document.getElementById("output");
+
+            out.innerHTML = "Temperature " + temperature + " C<br>";
+            out.innerHTML += "Pressure " + pressure + " hP <br>";
+            out.innerHTML += "Humidity " + humidity + " % <br>";
+
+
+        }
+    </script>
+</head>
+
+<body>
+    Location (City) <input type="text" id="city"><br>
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="output"></div>
+</body>
+
+</html>

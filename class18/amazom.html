@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var url = "https://www.amazon.de/gp/aw/d/B086LBCQJL/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=59bd181aab3a6200cfac4a4c5fa0fc1d&hsa_cr_id=0&qid=1733169935&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&ref_=sbx_be_s_sparkle_lsi4d_asin_0_img&pd_rd_w=gdWzf&content-id=amzn1.sym.6f8b36f0-c2c9-44f2-97a8-5b151d2fc9c7%3Aamzn1.sym.6f8b36f0-c2c9-44f2-97a8-5b151d2fc9c7&pf_rd_p=6f8b36f0-c2c9-44f2-97a8-5b151d2fc9c7&pf_rd_r=GTJHTN9MGTGXMNYDCD9S&pd_rd_wg=31RyV&pd_rd_r=1e8c85d0-08c1-4335-a84e-74f7f0bf4b07";
+        async function getAmazon() {
+
+
+            result = await fetch(url);
+
+            //amazonObject = await result.json();
+
+            console.log(result);
+
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    Location (City) <input type="text" id="city"><br>
+    <button onclick="getAmazon()">Get Weather</button>
+    <div id="output"></div>
+</body>
+
+</html>
