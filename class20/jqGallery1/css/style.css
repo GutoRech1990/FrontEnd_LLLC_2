@@ -1,0 +1,15 @@
+#container{
+    margin: auto;
+    width: 200px;
+    overflow: hidden;
+
+}
+
+#inner-container{
+    width: 100%;
+}
+
+#inner-container img{
+    display: inline-block;
+    width: 100%;
+}

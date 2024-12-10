@@ -1,0 +1,17 @@
+#container{
+    margin: auto;
+    width: 200px;
+    overflow: hidden;
+
+}
+
+#inner-container{
+    width: 200%;
+    overflow: hidden;
+}
+
+#inner-container img{
+    display: block;
+    width: 50%;
+    float: left;
+}

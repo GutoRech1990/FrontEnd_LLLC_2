@@ -1,0 +1,26 @@
+#weather{
+    background-color: beige;
+}
+
+#weather > .line span{
+    font-weight: bold;
+    
+}
+
+#weather.line img{
+    width: 50px;
+    padding: 5px;
+}
+
+#weather.center{
+    text-align: center;
+}
+
+#weather.line{
+    padding: 20px 0px;
+}
+
+#output{
+    width: 30%;
+    margin: auto;
+}

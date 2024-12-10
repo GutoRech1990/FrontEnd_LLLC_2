@@ -1,0 +1,11 @@
+.product img{
+    width: 100px;
+}
+
+.product{
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
